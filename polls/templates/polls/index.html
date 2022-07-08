@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="header-logo" href="/">QUICK<span>POLLS</span></a>
+            <div class="menu-wrapper">
+                <div class="menu-header-container">
+                    <ul id="menu-header" class="menu">
+                        <li class="menu-item"><a href="https://demotivation.ru/wp-content/uploads/2021/06/3-20.jpg" >
+                            <img src="https://img.icons8.com/metro/26/000000/binoculars.png"/>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% if latest_question_list %}
+    <main>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="block-level">
+                    <ul>
+                        <h1 align="center"> Choose poll</h1>
+                    {% for question in latest_question_list %}
+                        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                    {% else %}
+                        <p>No polls are available.</p>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-text">2022 © Machine. </div>
+                <div class="footer-text">
+                    Является учебным проектом
+                    <a href="https://github.com/Machine089">
+                        <img src="https://img.icons8.com/ios/35/000000/github--v1.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a>Сделано на Django 4</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quick polls</title>
+    <link rel="stylesheet" href="{% static 'home/home_style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="header-logo" href="/">QUICK<span>POLLS</span></a>
+            <div class="menu-wrapper">
+                <div class="menu-header-container">
+                    <ul id="menu-header" class="menu">
+                        <li class="menu-item"><a href="/polls/">Take survey</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="content">
+                    <h1>About the website</h1>
+                    <div class="content-inner">
+                        <p>This web application allows you to create polls and participate in voting.</p>
+                        <h2>What are polls</h2>
+                        <p align="justify">Voting is a way of making a decision by a group of people,
+                            in which the general opinion is formulated by counting the
+                            votes of the members of the group. Voting is usually preceded by discussion.</p>
+                        <p align="justify">In a democratic system, voting takes place in the
+                            election of officials and in decisions concerning the community.
+                            Voting can be open or secret. With open voting,
+                            it is not hidden how one or another participant voted.
+                            In a secret ballot, on the contrary, measures are taken to ensure that this information is
+                            not available. This excludes the possibility of any control over the will of the voter
+                            or pressure on him. This is to protect those who voted "incorrectly" from prosecution.
+                            On the other hand, the secret ballot cannot be verified after it has taken place, which
+                            leads to electoral manipulation and falsification of voting results.
+
+                            Open voting is diverse in its ways, from meeting participants indoors or outdoors to
+                            voting using the Internet. With a simple open vote,
+                            information about how and who voted remains among the voting participants,
+                            and for those who are not included in the circle of voters, only the results are published
+                            - in contrast to a roll-call open vote, when information about how and who voted becomes
+                            available to a wider circle of people.</p>
+                    </div>
+                </div>
+                <aside class="primary">
+                    <div class="widget">
+                        <div class="menu-aside-container">
+                            <ul id="menu-aside" class="menu">
+                                <li id="menu-item-1860" class="menu-item">
+                                    <a>Menu</a>
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-2804" class="menu-item">
+                                            <a>Polls</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-text">2022 © Machine. </div>
+                <div class="footer-text">
+                    Является учебным проектом
+                    <a href="https://github.com/Machine089">
+                        <img src="https://img.icons8.com/ios/35/000000/github--v1.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <a>Сделано на Django 4</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
